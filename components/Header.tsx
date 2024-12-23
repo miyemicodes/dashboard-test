@@ -40,7 +40,7 @@ export default function Header() {
 								<PiMicrosoftTeamsLogoFill className="text-base" />
 								<span>Collaborate</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1 divide-x divide-slate-300 rounded hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
+							<li className="flex flex-row items-center justify-start gap-1 divide-x divide-slate-300 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<div className="w-max flex flex-row gap-1 p-1">
 									<RiDeleteBinLine className="text-base" />
 									<span>Delete</span>

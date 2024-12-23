@@ -45,7 +45,7 @@ export default function Modal({ open, onClose, children }: ModalProps) {
 			onClick={(e) => e.target === dialogRef.current && onClose()}
 		>
 			<div className="p-[0.125rem] mt-14 md:mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-xl ">
-				<div className="bg-[#efefef] rounded-lg shadow-lg max-w-lg md:max-w-3xl  w-full">
+				<div className="bg-[#efefef] rounded-lg shadow-lg max-w-sm md:max-w-md lg:max-w-2xl  w-full">
 					<header className="p-4 flex justify-between items-center">
 						<button
 							onClick={onClose}
