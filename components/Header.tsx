@@ -20,27 +20,27 @@ export default function Header() {
 				<div className="flex items-center justify-center gap-3">
 					<div className="flex items-center justify-center gap-3">
 						<ul className="flex items-center justify-center gap-4 text-xs whitespace-nowrap">
-							<li className="flex flex-row items-center justify-start gap-1">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<CiImageOn className="text-base" />
 								<span>Show chart</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<CiCircleList className="text-base" />
 								<span>Focused view</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<BsPlusLg className="text-base" />
 								<span>New</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<PiArrowClockwiseFill className="text-base" />
 								<span> Refresh</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<PiMicrosoftTeamsLogoFill className="text-base" />
 								<span>Collaborate</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1 divide-x divide-slate-300 rounded">
+							<li className="flex flex-row items-center justify-start gap-1 divide-x divide-slate-300 rounded hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
 								<div className="w-max flex flex-row gap-1 p-1">
 									<RiDeleteBinLine className="text-base" />
 									<span>Delete</span>
@@ -57,15 +57,15 @@ export default function Header() {
 					</button>
 
 					<ul className="flex items-center justify-center gap-2 text-xs whitespace-nowrap">
-						<li className="flex flex-row items-center justify-start gap-1 p-2 border rounded">
+						<li className="flex flex-row items-center justify-start gap-1 p-2 border  hover:text-slate-100  hover:bg-blue-500 rounded-md transition duration-300">
 							<LuDatabaseZap className="text-base" />
 							<span>Smart data</span>
 						</li>
-						<li className="flex flex-row items-center justify-start gap-1 p-2 border rounded">
+						<li className="flex flex-row items-center justify-start gap-1 p-2 border  hover:text-slate-100  hover:bg-blue-500 rounded-md transition duration-300">
 							<IoFilterOutline className="text-base" />
 							<span>Edit filters</span>
 						</li>
-						<li className="flex flex-row items-center justify-start gap-1 p-2 border rounded">
+						<li className="flex flex-row items-center justify-start gap-1 p-2 border  hover:text-slate-100  hover:bg-blue-500 rounded-md transition duration-300">
 							<LuColumns3 className="text-base" />
 							<span>Edit columns</span>
 						</li>
