@@ -75,7 +75,7 @@ export default function LeadsAccordion() {
 										className="flex flex-col gap-3 border p-2 rounded-xl"
 									>
 										<div className="flex items-center justify-start gap-1">
-											<div className="flex gap-2 w-[26] h-[26] rounded-full">
+											<div className="flex gap-2 w-[26px] h-[26px] rounded-full">
 												<Image
 													src={teamImage1}
 													alt="COO"
@@ -234,13 +234,14 @@ export default function LeadsAccordion() {
 					)}
 				</div>
 			</div>
+			
 			{isModalOpen && (
 				<Modal
 					open={isModalOpen}
 					onClose={() => setModalOpen(false)}
 					title="Welcome"
 				>
-					<Engage/>
+					<Engage />
 				</Modal>
 			)}
 		</>

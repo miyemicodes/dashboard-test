@@ -51,6 +51,7 @@ function AgentSkills() {
 							)}
 						</button>
 					</div>
+					
 					{isOpen && (
 						<div className="w-full px-4 py-6">
 							<p className="text-sm leading-6">

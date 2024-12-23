@@ -48,7 +48,7 @@ export default function Modal({
 			className="modal fixed inset-0 z-50 flex items-center justify-center bg-black/50 w-full h-full"
 			onClick={(e) => e.target === dialogRef.current && onClose()}
 		>
-			<div className="bg-white rounded-lg shadow-lg max-w-lg md:max-w-3xl  w-full">
+			<div className="bg-[#efefef] rounded-lg shadow-lg max-w-lg md:max-w-3xl  w-full">
 				<header className="p-4 flex justify-between items-center">
 					<button
 						onClick={onClose}
