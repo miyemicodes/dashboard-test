@@ -37,7 +37,7 @@ export default function Sidebar() {
 	};
 	return (
 		<>
-			<div className="w-max bg-[#efefef] h-screen">
+			<div className="w-max  z-50 h-screen">
 				<button
 					onClick={toggleSidebar}
 					className="md:hidden fixed top-4 left-1 z-50 p-2 text-lg text-black"
@@ -45,7 +45,7 @@ export default function Sidebar() {
 					{isOpen ? <FaTimes /> : <FaBars />}
 				</button>
 				<div
-					className={`fixed top-0 left-0 text-black transition-transform duration-300 w-max h-screen overflow-y-scroll no-scrollbar ${
+					className={`fixed top-0 left-0 text-black transition-transform duration-300 bg-[#efefef] w-max h-screen overflow-y-scroll no-scrollbar ${
 						isOpen ? "translate-x-0" : "-translate-x-full"
 					} md:translate-x-0 md:static w-[210px] z-40 `}
 				>
