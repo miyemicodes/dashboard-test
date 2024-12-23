@@ -91,7 +91,7 @@ export default function LeadsAccordion() {
 											</div>
 										</div>
 
-										<div className="bg-[#f5f7ff] p-2 rounded-lg">
+									<div className="bg-[#f5f7ff] p-2 rounded-lg">
 											<div className="flex items-start justify-between">
 												<div className="flex items-center gap-2">
 													<BsEnvelopeArrowDown />
