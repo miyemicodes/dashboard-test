@@ -72,7 +72,7 @@ export default function LeadsAccordion() {
 								<ul className="flex flex-col md:flex-row gap-3 p-3">
 									<li
 										onClick={() => setModalOpen(true)}
-										className="flex flex-col gap-3 border p-2 rounded-xl hover:bg-[#e1e3ec] "
+										className="w-full flex flex-col gap-3 border p-2 rounded-xl hover:bg-[#e1e3ec] "
 									>
 										<div className="flex items-center justify-start gap-1">
 											<div className="flex gap-2 w-[26px] h-[26px] rounded-full">
