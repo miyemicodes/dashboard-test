@@ -4,10 +4,8 @@ import React from "react";
 
 function AppInput({
 	type = "text",
-	label,
 	readOnly,
 	id,
-	icon,
 	value = "",
 	placeholder,
 	name = "",

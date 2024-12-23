@@ -2,6 +2,10 @@
 
 import { FaBars, FaTimes } from "react-icons/fa";
 import Link from "next/link";
+
+import Modal from "./Modal";
+import AgentSkills from "./AgentSkills";
+
 import { useState } from "react";
 import { VscHome } from "react-icons/vsc";
 import { CiClock2 } from "react-icons/ci";
@@ -26,13 +30,14 @@ import { PiPhoneListBold } from "react-icons/pi";
 
 export default function Sidebar() {
 	const [isOpen, setIsOpen] = useState(false);
+	const [isModalOpen, setModalOpen] = useState(false);
 
 	const toggleSidebar = () => {
 		setIsOpen(!isOpen);
 	};
 	return (
 		<>
-			<div className="w-max">
+			<div className="w-max bg-[#efefef] h-screen">
 				<button
 					onClick={toggleSidebar}
 					className="md:hidden fixed top-4 left-1 z-50 p-2 text-lg text-black"
@@ -40,7 +45,7 @@ export default function Sidebar() {
 					{isOpen ? <FaTimes /> : <FaBars />}
 				</button>
 				<div
-					className={`fixed top-0 left-0 bg-gray-300 text-black transition-transform duration-300 w-max h-screen overflow-y-scroll no-scrollbar ${
+					className={`fixed top-0 left-0 text-black transition-transform duration-300 w-max h-screen overflow-y-scroll no-scrollbar ${
 						isOpen ? "translate-x-0" : "-translate-x-full"
 					} md:translate-x-0 md:static w-[210px] z-40 `}
 				>
@@ -102,6 +107,13 @@ export default function Sidebar() {
 								<TbUserQuestion className="text-base" />
 								<span>Competitors</span>
 							</li>
+							<li
+								onClick={() => setModalOpen(true)}
+								className="flex items-center justify-start gap-2 px-4 py-2 cursor-pointer font-normal hover:bg-white hover:border-blue-500 hover:border-l-4 transition duration-300 "
+							>
+								<TbUserQuestion className="text-base" />
+								<span>Agent Skill</span>
+							</li>
 						</ul>
 
 						<ul className="flex flex-col gap-0 w-full">
@@ -147,6 +159,15 @@ export default function Sidebar() {
 					</nav>
 				</div>
 			</div>
+
+			{isModalOpen && (
+				<Modal
+					open={isModalOpen}
+					onClose={() => setModalOpen(false)}
+				>
+					<AgentSkills />
+				</Modal>
+			)}
 		</>
 	);
 }
