@@ -2,15 +2,14 @@
 
 import React from "react";
 import { useState } from "react";
-
 import Image from "next/image";
 
 import { BsStars } from "react-icons/bs";
-
 import teamImage1 from "@/public/assets/teamImage1.jpg";
+import logo from "@/public/assets/logo.png";
+import logo2 from "@/public/assets/logo2.png";
 import copilot from "@/public/assets/copilot.png";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
-
 import {
 	FaEdit,
 	FaIdBadge,
@@ -52,7 +51,7 @@ function Engage() {
 				</div>
 			</div>
 
-			<div className="w-full flex items-center justify-between p-2 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 rounded-xl">
+			<div className="w-full flex items-center justify-between p-2 bg-gradient-to-r from-blue-300 via-purple-300 to-pink-300 rounded-xl shadow-md">
 				<div className="flex items-center gap-2 text-slate-100">
 					<BsStars className="text-sm" />
 					<p className="text-xs leading-5">
@@ -73,8 +72,8 @@ function Engage() {
 				</div>
 			</div>
 
-			<div className="w-full bg-[#f5f7ff] p-2 rounded-lg flex flex-col gap-3">
-				<div className="bg-[#efefef] rounded-lg ">
+			<div className="w-full bg-[#f5f7ff] p-2 rounded-lg flex flex-col gap-3 shadow-lg">
+				<div className="bg-[#efefef] rounded-lg p-2">
 					<div className="flex items-start justify-between">
 						<div className="flex items-center gap-2">
 							<p className="text-xs font-bold text-blue-500">
@@ -99,6 +98,53 @@ function Engage() {
 							store coffee shops
 						</li>
 					</ul>
+
+					<div className="flex items-center gap-4">
+						<div className="flex gap-2 items-center bg-slate-100 rounded-xl shadow-sm p-2">
+							<div className="flex gap-2 w-[39px] h-[39px]">
+								<Image
+									src={logo}
+									alt="COO"
+									className="w-[39px] h-[39px] object-cover"
+								/>
+							</div>
+
+							<div className="text-sm">
+								<p>Decision maker</p>
+								<span className="font-semibold text-blue-600">Yes</span>
+							</div>
+						</div>
+
+						<div className="flex gap-2 items-center bg-slate-100 rounded-xl shadow-sm p-2">
+							<div className="flex gap-2 w-[39px] h-[39px]">
+								<Image
+									src={copilot}
+									alt="COO"
+									className="w-[39px] h-[39px] object-cover"
+								/>
+							</div>
+
+							<div className="text-sm">
+								<p>Potential value</p>
+								<span className="font-semibold text-blue-600">$1M </span>
+							</div>
+						</div>
+
+						<div className="flex gap-2 items-center bg-slate-100 rounded-xl shadow-sm p-2">
+							<div className="flex gap-2 w-[39px] h-[39px]">
+								<Image
+									src={logo2}
+									alt="COO"
+									className="w-[39px] h-[39px] object-cover"
+								/>
+							</div>
+
+							<div className="text-sm">
+								<p>Intent</p>
+								<span className="font-semibold text-blue-600">High</span>
+							</div>
+						</div>
+					</div>
 				</div>
 
 				<div className="flex items-center justify-between">
