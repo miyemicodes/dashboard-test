@@ -44,9 +44,9 @@ export default function Modal({ open, onClose, children }: ModalProps) {
 			className="modal fixed inset-0 z-50 flex items-center justify-center bg-black/50 w-full h-full"
 			onClick={(e) => e.target === dialogRef.current && onClose()}
 		>
-			<div className="p-[0.125rem] mt-14 md:mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-xl ">
-				<div className="bg-[#efefef] rounded-lg shadow-lg max-w-sm md:max-w-md lg:max-w-2xl  w-full">
-					<header className="p-4 flex justify-between items-center">
+			<div className="p-[0.125rem] mt-10 md:mt-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-xl ">
+				<div className="bg-[#efefef] rounded-lg shadow-lg max-w-sm md:max-w-md lg:max-w-2xl w-full max-h-fit ">
+					<header className="p-2 flex justify-between items-center">
 						<button
 							onClick={onClose}
 							aria-label="Close Modal"
@@ -56,11 +56,11 @@ export default function Modal({ open, onClose, children }: ModalProps) {
 						</button>
 					</header>
 
-					<main className="p-4">{children}</main>
-					<footer className="p-4 flex justify-end">
+					<main className="p-2">{children}</main>
+					<footer className="p-2 flex justify-end">
 						<button
 							onClick={onClose}
-							className="px-4 py-2 bg-slate-50 text-slate-800 border-2 hover:text-white rounded hover:bg-blue-600"
+							className="px-3 py-1 bg-slate-50 text-slate-800 border-2 hover:text-white rounded hover:bg-blue-600"
 						>
 							Close
 						</button>

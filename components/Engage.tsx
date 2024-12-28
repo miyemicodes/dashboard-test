@@ -24,7 +24,7 @@ function Engage() {
 		setIsOpen(!isOpen);
 	};
 	return (
-		<div className="bg-[#efefef] flex flex-col items-center gap-3">
+		<div className=" bg-[#efefef] flex flex-col items-center gap-3">
 			<div className="w-full flex items-center gap-3">
 				<div className="flex gap-2 w-[26px] h-[26px]">
 					<Image
@@ -99,7 +99,7 @@ function Engage() {
 						</li>
 					</ul>
 
-					<div className="flex items-center gap-4">
+					<div className="hidden md:flex items-center gap-1 md:gap-4">
 						<div className="flex gap-2 items-center bg-slate-100 rounded-xl shadow-sm p-2">
 							<div className="flex gap-2 w-[39px] h-[39px]">
 								<Image
@@ -109,13 +109,13 @@ function Engage() {
 								/>
 							</div>
 
-							<div className="text-sm">
+							<div className="text-xs md:text-sm">
 								<p>Decision maker</p>
 								<span className="font-semibold text-blue-600">Yes</span>
 							</div>
 						</div>
 
-						<div className="flex gap-2 items-center bg-slate-100 rounded-xl shadow-sm p-2">
+						<div className="flex gap-1 md:gap-3 items-center bg-slate-100 rounded-xl shadow-sm p-2">
 							<div className="flex gap-2 w-[39px] h-[39px]">
 								<Image
 									src={copilot}
@@ -124,7 +124,7 @@ function Engage() {
 								/>
 							</div>
 
-							<div className="text-sm">
+							<div className="text-xs md:text-sm">
 								<p>Potential value</p>
 								<span className="font-semibold text-blue-600">$1M </span>
 							</div>
@@ -139,7 +139,7 @@ function Engage() {
 								/>
 							</div>
 
-							<div className="text-sm">
+							<div className="text-xs md:text-sm">
 								<p>Intent</p>
 								<span className="font-semibold text-blue-600">High</span>
 							</div>
@@ -147,8 +147,8 @@ function Engage() {
 					</div>
 				</div>
 
-				<div className="flex items-center justify-between">
-					<div className="flex items-center gap-2 ">
+				<div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-2">
+					<div className="flex items-start md:items-center gap-2 ">
 						<FaIdBadge className=" bg-slate-200 text-base text-yellow-500 rounded-lg border border-slate-300" />
 						<span className="p-1 text-xs bg-slate-200 rounded-lg border border-slate-300">
 							D365 Sales
@@ -168,7 +168,7 @@ function Engage() {
 				</div>
 			</div>
 
-			<div className="w-full bg-[#fefefe] shadow-lg p-4 pb-6 rounded-xl">
+			<div className="hidden md:flex flex-col w-full bg-[#fefefe] shadow-lg p-4 pb-6 rounded-xl">
 				<div className="flex items-center justify-between cursor-pointer ">
 					<p className="font-bold text-sm">About Jane</p>
 					<button

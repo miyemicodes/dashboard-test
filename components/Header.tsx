@@ -10,7 +10,7 @@ import { RiDeleteBinLine } from "react-icons/ri";
 
 export default function Header() {
 	return (
-		<header className="bg-slate-100 fixed top-0 left-0 w-full  md:static ">
+		<header className="bg-slate-100 fixed top-0 left-0 w-screen  md:static ">
 			<div className=" flex items-center justify-between gap-3 px-6 py-2 shadow-xl rounded-md overflow-x-auto no-scrollbar md:overflow-visible ml-[80px] md:ml-0">
 				<div className="flex items-center justify-center gap-2 whitespace-nowrap">
 					<p className="font-sans text-xs">My open leads</p>
