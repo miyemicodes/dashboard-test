@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 
+import Select from "../Select/Select";
 import AppInput from "../Search";
+
 export default function Table() {
 	const [search, setSearch] = useState("");
 
@@ -21,10 +23,13 @@ export default function Table() {
 						<tr>
 							<th className="border-b border-gray-300 p-2"></th>
 							<th className="border-b border-gray-300 p-2 text-left">
-								<select>
-									<option>Name </option>
-									<option>Name 1</option>
-								</select>
+								<Select
+									options={[
+										{ label: "Exchange", value: "Exchange" },
+										{ label: "Transfer", value: "Transfer" },
+										{ label: "MoneyNow", value: "MoneyNow" },
+									]}
+								/>
 							</th>
 							<th className="border-b border-gray-300 p-2 text-left">
 								<select>
@@ -54,19 +59,20 @@ export default function Table() {
 								<input type="checkbox" />
 							</td>
 							<td className="border-b border-gray-300 px-2 py-3 text-left">
-								Winson Asher
+								name
 							</td>
 							<td className="border-b border-gray-300 px-2 py-3 text-left">
-								Cafe A100 for commercial use
+								topic
 							</td>
 							<td className="border-b border-gray-300 px-2 py-3 text-left">
-								New
+								statusReason
 							</td>
 
 							<td className="border-b border-gray-300 px-2 py-3 text-left">
-								date 1
+								createdOn
 							</td>
 						</tr>
+
 						<tr>
 							<td className="border-b border-gray-300  px-2 py-3">
 								<input type="checkbox" />
