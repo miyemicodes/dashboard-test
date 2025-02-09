@@ -3,6 +3,8 @@
 import { useState } from "react";
 import AppInput from "../Search";
 import dummyData from "@/components/data/dummy"; // Import the dummy data
+import { IoGridOutline } from "react-icons/io5";
+import { FaTable } from "react-icons/fa";
 
 export default function Table() {
 	const [search, setSearch] = useState("");
@@ -10,7 +12,7 @@ export default function Table() {
 
 	return (
 		<div className="bg-slate-50 p-5 ">
-			<div className="flex flex-row-reverse items-start gap-5 mb-4">
+			<div className="flex flex-row-reverse items-center justify-between gap-5 px-4 py-2 mb-4">
 				<AppInput
 					type="search"
 					value={search}
@@ -21,7 +23,7 @@ export default function Table() {
 					onClick={() => setIsGrid(!isGrid)}
 					className=" px-4 py-2 bg-blue-500 text-white rounded"
 				>
-					Switch to {isGrid ? "Table" : "Grid"}
+				{isGrid ? <FaTable /> : <IoGridOutline />}
 				</button>
 			</div>
 
