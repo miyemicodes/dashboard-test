@@ -1,6 +1,5 @@
 import MainContent from "@/components/MainContent";
 import Sidebar from "@/components/Sidebar";
-import ToggleTableGrid from "@/components/Test";
 
 export default function Home() {
 	return (

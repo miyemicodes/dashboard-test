@@ -27,9 +27,10 @@ function Select({
 	value = "",
 }: SelectProps) {
 	return (
+		
 		<select
 			value={value}
-			onSelect={((e) => )}
+		 	onSelect={((e) => )}
 			className=""
 		>
 			{placeholder && (

@@ -8,7 +8,6 @@ export default function ToggleTableGrid() {
 
 	return (
 		<div className="p-4">
-			{/* Toggle Button */}
 			<button
 				onClick={() => setIsGrid(!isGrid)}
 				className="mb-4 px-4 py-2 bg-blue-500 text-white rounded"
@@ -16,7 +15,6 @@ export default function ToggleTableGrid() {
 				Switch to {isGrid ? "Table" : "Grid"}
 			</button>
 
-			{/* Table/Grid Container */}
 			<div
 				className={`w-full border ${
 					isGrid
@@ -24,10 +22,10 @@ export default function ToggleTableGrid() {
 						: "table" // Table layout
 				}`}
 			>
-				{/* Table Header */}
 				{!isGrid && (
 					<div className="table-header-group bg-gray-200">
 						<div className="table-row">
+							<div className="table-cell p-2 font-bold"> </div>
 							<div className="table-cell p-2 font-bold">Name</div>
 							<div className="table-cell p-2 font-bold">Topic</div>
 							<div className="table-cell p-2 font-bold">Status Reason</div>
@@ -37,31 +35,32 @@ export default function ToggleTableGrid() {
 				)}
 
 				{/* Rows */}
-				<div className={isGrid ? "" : "table-row-group"}>
-					{dummyData.map((row) => (
-						<div
-							key={row.id}
-							className={`${isGrid ? "border p-2" : "table-row"}`}
-						>
-							{/* Name */}
-							<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
-								{row.name}
-							</div>
-							{/* Topic */}
-							<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
-								{row.topic}
-							</div>
-							{/* Status Reason */}
-							<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
-								{row.statusReason}
-							</div>
-							{/* Created On */}
-							<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
-								{row.createdOn}
-							</div>
+				{dummyData.map((row) => (
+					<div
+						key={row.id}
+						className={`${isGrid ? "border p-2" : "table-row border-b border-gray-300"}`}
+					>
+						<td className="  px-2 py-3">
+							<input type="checkbox" />
+						</td>
+						{/* Name */}
+						<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+							{row.name}
 						</div>
-					))}
-				</div>
+						{/* Topic */}
+						<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+							{row.topic}
+						</div>
+						{/* Status Reason */}
+						<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+							{row.statusReason}
+						</div>
+						{/* Created On */}
+						<div className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+							{row.createdOn}
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	);
