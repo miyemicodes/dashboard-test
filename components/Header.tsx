@@ -1,3 +1,7 @@
+"use client";
+
+import teamImage1 from "@/public/assets/teamImage1.jpg";
+
 import { BsPlusLg } from "react-icons/bs";
 import { CiCircleList, CiImageOn } from "react-icons/ci";
 import { FaRegShareSquare } from "react-icons/fa";
@@ -7,14 +11,65 @@ import { IoFilterOutline } from "react-icons/io5";
 import { LuColumns3, LuDatabaseZap } from "react-icons/lu";
 import { PiArrowClockwiseFill, PiMicrosoftTeamsLogoFill } from "react-icons/pi";
 import { RiDeleteBinLine } from "react-icons/ri";
+import { BsStars } from "react-icons/bs";
+import { BsEnvelopeArrowDown } from "react-icons/bs";
+
+import { Tooltip } from "react-tooltip";
+import Image from "next/image";
 
 export default function Header() {
 	return (
 		<header className="bg-slate-100 fixed top-0 left-0 w-screen  md:static ">
 			<div className=" flex items-center justify-between gap-3 px-6 py-2 shadow-xl rounded-md overflow-x-auto no-scrollbar md:overflow-visible ml-[80px] md:ml-0">
-				<div className="flex items-center justify-center gap-2 whitespace-nowrap">
-					<p className="font-sans text-xs">My open leads</p>
-					<IoIosArrowDown className="text-base" />
+				<div>
+					<div
+						data-tooltip-id="my-tooltip"
+						className="flex items-center justify-center gap-2 whitespace-nowrap"
+					>
+						<p className="font-sans text-xs">My open leads</p>
+						<IoIosArrowDown className="text-base" />
+					</div>
+					<Tooltip
+						id="my-tooltip"
+						place="right"
+						style={{ backgroundColor: "rgb(255, 255, 255)", color: "#222", zIndex: "100000", boxShadow: "0 0 10px rgba(0, 0, 0, 0.6)" }}
+					>
+						<div className="flex items-center justify-start gap-1">
+							<div className="flex gap-2 w-[26px] h-[26px] rounded-full">
+								<Image
+									src={teamImage1}
+									alt="COO"
+									className="w-[26px] h-[26px] rounded-full object-cover"
+								/>
+							</div>
+
+							<div className="text-xs">
+								<p className="font-bold">Jane Reyes</p>
+								<p className="text-slate-400">COO . Northwind Traders</p>
+							</div>
+						</div>
+
+						<div className=" p-2 rounded-lg bg-[#ecebeb]">
+							<div className="flex items-start justify-between">
+								<div className="flex items-center gap-2">
+									<BsEnvelopeArrowDown />
+									<p className="text-xs font-bold">Engage with Jane Reyes</p>
+								</div>
+
+								<BsStars className="bg-white p-1" />
+							</div>
+
+							<p className="text-xs leading-5">
+								Jane may be interested in upgrading espresso machines for her
+								in-store coffee shops.
+							</p>
+						</div>
+
+						<div className="text-xs text-gray-500 divide-x divide-gray-200">
+							<span className="p-1">Expand business </span>
+							<span className="p-1">High buying intent</span>
+						</div>
+					</Tooltip>
 				</div>
 
 				<div className="flex items-center justify-center gap-3">
