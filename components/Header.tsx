@@ -32,7 +32,12 @@ export default function Header() {
 					<Tooltip
 						id="my-tooltip"
 						place="right"
-						style={{ backgroundColor: "rgb(255, 255, 255)", color: "#222", zIndex: "100000", boxShadow: "0 0 10px rgba(0, 0, 0, 0.6)" }}
+						style={{
+							backgroundColor: "rgb(255, 255, 255)",
+							color: "#222",
+							zIndex: "100000",
+							boxShadow: "0 0 10px rgba(0, 0, 0, 0.6)",
+						}}
 					>
 						<div className="flex items-center justify-start gap-1">
 							<div className="flex gap-2 w-[26px] h-[26px] rounded-full">
@@ -75,23 +80,23 @@ export default function Header() {
 				<div className="flex items-center justify-center gap-3">
 					<div className="flex items-center justify-center gap-3">
 						<ul className="flex items-center justify-center gap-4 text-xs whitespace-nowrap">
-							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
 								<CiImageOn className="text-base" />
 								<span>Show chart</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
 								<CiCircleList className="text-base" />
 								<span>Focused view</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
 								<BsPlusLg className="text-base" />
 								<span>New</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
 								<PiArrowClockwiseFill className="text-base" />
 								<span> Refresh</span>
 							</li>
-							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-1 hover:bg-blue-500 rounded-md transition duration-300">
+							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
 								<PiMicrosoftTeamsLogoFill className="text-base" />
 								<span>Collaborate</span>
 							</li>
@@ -101,7 +106,7 @@ export default function Header() {
 									<span>Delete</span>
 								</div>
 								<div className="p-1">
-									<IoIosArrowDown className="text-base text-slate-400" />
+									<IoIosArrowDown className="text-base text-slate-400 p-1 hover:text-white" />
 								</div>
 							</li>
 						</ul>
