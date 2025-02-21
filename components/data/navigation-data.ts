@@ -1,4 +1,3 @@
-import react from 'react';
 
 import { IconType } from 'react-icons';
 import { AiOutlineUser } from 'react-icons/ai';

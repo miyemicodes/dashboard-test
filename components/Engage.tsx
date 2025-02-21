@@ -18,7 +18,7 @@ import {
 	FaThumbsUp,
 } from "react-icons/fa";
 
-function Engage() {
+export default function Engage() {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleAccordion = () => {
 		setIsOpen(!isOpen);
@@ -201,5 +201,3 @@ function Engage() {
 		</div>
 	);
 }
-
-export default Engage;

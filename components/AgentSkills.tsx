@@ -15,7 +15,7 @@ import outlook from "@/public/assets/outlook.png";
 
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-function AgentSkills() {
+export default function AgentSkills() {
 	const [isOpen, setIsOpen] = useState(false);
 	const toggleAccordion = () => {
 		setIsOpen(!isOpen);
@@ -124,4 +124,3 @@ function AgentSkills() {
 	);
 }
 
-export default AgentSkills;
