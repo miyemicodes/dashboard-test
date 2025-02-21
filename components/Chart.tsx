@@ -1,3 +1,5 @@
+"use client";
+
 import { Bar, Pie, Line, PolarArea, Radar } from "react-chartjs-2";
 import {
 	Chart as ChartJS,
@@ -13,7 +15,6 @@ import {
 	RadialLinearScale,
 } from "chart.js";
 import { useState } from "react";
-import Sidebar from "@/components/Sidebar";
 
 ChartJS.register(
 	CategoryScale,
@@ -29,6 +30,8 @@ ChartJS.register(
 );
 
 export default function ChartsPage() {
+
+	
 	const [chartData] = useState({
 		labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
 		datasets: [
@@ -58,7 +61,6 @@ export default function ChartsPage() {
 
 	return (
 		<div className="flex">
-			<Sidebar />
 			<div className="flex-1 p-6">
 				<h1 className="text-2xl font-bold mb-6">Charts Dashboard</h1>
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
