@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<body>
+			<body suppressHydrationWarning>
 				<PagesProvider>{children}</PagesProvider>
 				<div id="modal-root"></div>
 			</body>
