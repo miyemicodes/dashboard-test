@@ -1,8 +1,5 @@
 "use client";
 
-import { usePagesContext } from "@/store/pages-context";
-
-import ChartsPage from "./Chart";
 
 import teamImage1 from "@/public/assets/teamImage1.jpg";
 
@@ -23,15 +20,12 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import { useState } from "react";
 
-
 const ChartComponent = dynamic(() => import("./Chart"), {
 	ssr: false,
 });
 
-
 export default function Header() {
-	const { setActivePage } = usePagesContext();
-
+	const [showChart, setShowChart] = useState(false);
 
 	return (
 		<header className="bg-slate-100 fixed top-0 left-0 w-screen  md:static ">
@@ -96,7 +90,7 @@ export default function Header() {
 					<div className="flex items-center justify-center gap-3">
 						<ul className="flex items-center justify-center gap-4 text-xs whitespace-nowrap">
 							<li
-								onClick={() => setActivePage(ChartsPage)}
+								onClick={() => setShowChart(!showChart)}
 								className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300"
 							>
 								<CiImageOn className="text-base" />
@@ -161,6 +155,8 @@ export default function Header() {
 					</button>
 				</div>
 			</div>
+
+			{showChart && <ChartComponent />}
 		</header>
 	);
 }

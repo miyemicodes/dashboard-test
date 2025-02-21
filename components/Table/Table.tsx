@@ -67,30 +67,34 @@ export default function Table() {
 					</tr>
 				)}
 
-				{dummyData.map((row) => (
-					<tr
-						key={row.id}
-						className={`text-xs font-semibold text-slate-500 w-full flex flex-col ${
-							isGrid ? "border p-2" : "table-row border-b border-gray-300"
-						}`}
-					>
-						<td className="  px-2 py-3">
-							<input type="checkbox" />
-						</td>
-						{/* Name */}
-						<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>{row.name}</td>
-						{/* Topic */}
-						<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>{row.topic}</td>
-						{/* Status Reason */}
-						<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
-							{row.statusReason}
-						</td>
-						{/* Created On */}
-						<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
-							{row.createdOn}
-						</td>
-					</tr>
-				))}
+					{dummyData.map((row) => (
+						<tr
+							key={row.id}
+							className={`text-xs font-semibold text-slate-500 w-full flex flex-col ${
+								isGrid ? "border p-2" : "table-row border-b border-gray-300"
+							}`}
+						>
+							<td className="  px-2 py-3">
+								<input type="checkbox" />
+							</td>
+							{/* Name */}
+							<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+								{row.name}
+							</td>
+							{/* Topic */}
+							<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+								{row.topic}
+							</td>
+							{/* Status Reason */}
+							<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+								{row.statusReason}
+							</td>
+							{/* Created On */}
+							<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
+								{row.createdOn}
+							</td>
+						</tr>
+					))}
 			</table>
 		</div>
 	);
