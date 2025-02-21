@@ -68,7 +68,7 @@ export default function Table() {
 				)}
 
 				{dummyData.map((row) => (
-					<div
+					<tr
 						key={row.id}
 						className={`text-xs font-semibold text-slate-500 w-full flex flex-col ${
 							isGrid ? "border p-2" : "table-row border-b border-gray-300"
@@ -89,7 +89,7 @@ export default function Table() {
 						<td className={`p-2 ${isGrid ? "" : "table-cell"}`}>
 							{row.createdOn}
 						</td>
-					</div>
+					</tr>
 				))}
 			</table>
 		</div>

@@ -80,7 +80,7 @@ export default function Header() {
 				<div className="flex items-center justify-center gap-3">
 					<div className="flex items-center justify-center gap-3">
 						<ul className="flex items-center justify-center gap-4 text-xs whitespace-nowrap">
-							<li className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
+							<li  className="flex flex-row items-center justify-start gap-1 hover:text-slate-100 p-2 hover:bg-blue-500 rounded-md transition duration-300">
 								<CiImageOn className="text-base" />
 								<span>Show chart</span>
 							</li>
