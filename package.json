@@ -6,26 +6,29 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --check --ignore-path .gitignore .",
+    "format:fix": "prettier --write --ignore-path .gitignore ."
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "chart.js": "^4.4.8",
+    "eslint": "^9.21.0",
+    "eslint-config-next": "^15.1.7",
     "next": "15.1.2",
     "react": "^19.0.0",
     "react-chartjs-2": "^5.3.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "react-tooltip": "^5.28.0"
+    "react-tooltip": "^5.28.0",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "eslint": "^9",
-    "eslint-config-next": "15.1.2",
     "postcss": "^8",
+    "prettier": "^3.5.1",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
