@@ -10,13 +10,13 @@ import copilot from '@/public/assets/copilot.png';
 import logo from '@/public/assets/logo.png';
 import logo2 from '@/public/assets/logo2.png';
 
-import Modal from './Modal';
+import Modal from '../Modal';
 
 import { BsStars } from 'react-icons/bs';
 import { BsEnvelopeArrowDown } from 'react-icons/bs';
 
 import { LuCalendarDays } from 'react-icons/lu';
-import Engage from './Engage';
+import Engage from '../Engage/Engage';
 
 export default function LeadsAccordion() {
   const [isOpen, setIsOpen] = useState(true);

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { PagesProvider } from '@/store/pages-context';
 
 export const metadata: Metadata = {
   title: 'Dashboard-C',
@@ -15,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body suppressHydrationWarning>
-        <PagesProvider>{children}</PagesProvider>
+         {children}
         <div id='modal-root'></div>
       </body>
     </html>

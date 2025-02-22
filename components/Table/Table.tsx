@@ -1,15 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import AppInput from '../Search';
-import dummyData from '@/components/data/dummy'; // Import the dummy data
+import AppInput from '../SearchBox/Search';
+import { dummyData } from '@/utils/data/dummy'; // Import the dummy data
 import { IoGridOutline } from 'react-icons/io5';
 import { FaTable } from 'react-icons/fa';
 
 export default function Table() {
   const [search, setSearch] = useState('');
   const [isGrid, setIsGrid] = useState(false);
-
   return (
     <div className='bg-slate-50 p-5 '>
       <div className='flex flex-row-reverse items-center justify-between gap-5 px-4 py-2 mb-4'>

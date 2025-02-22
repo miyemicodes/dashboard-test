@@ -2,11 +2,11 @@
 
 import { FaBars } from 'react-icons/fa';
 
-import Modal from './Modal';
-import AgentSkills from './AgentSkills';
+import Modal from '../Modal';
+import AgentSkills from '../AgentSkills';
 
 import { useState } from 'react';
-import { navigationData } from './data/navigation-data';
+import { navigationData } from '../../types/navigation-data';
 
 export default function Sidebar() {
   const [isOpen, setIsOpen] = useState(true);

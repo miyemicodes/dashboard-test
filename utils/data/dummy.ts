@@ -1,5 +1,13 @@
+export interface IDummyData {
+  id: number;
+  name: string;
+  topic: string;
+  statusReason: string;
+  createdOn: string;
+}
+
 // dummyData.js
-const dummyData = [
+export const dummyData: IDummyData[] = [
   {
     id: 1,
     name: 'Winson Asher',
@@ -141,5 +149,3 @@ const dummyData = [
     createdOn: '2024-12-20',
   },
 ];
-
-export default dummyData;
