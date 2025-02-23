@@ -1,8 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+
 import AppInput from '../SearchBox/Search';
-import { dummyData } from '@/utils/data/dummy'; // Import the dummy data
+import TableGrid from '../Table-grid';
+import Grid from '../Grid';
+
 import { IoGridOutline } from 'react-icons/io5';
 import { FaTable } from 'react-icons/fa';
 
@@ -26,79 +29,7 @@ export default function Table() {
         </button>
       </div>
 
-      <table
-        className={`overflow-x-auto table-auto border-collapse w-full text-sm  ${
-          isGrid
-            ? 'grid items-center grid-cols-[auto_auto_auto_auto] gap-4 w-full' // Grid layout
-            : 'table' // Table layout
-        }`}
-      >
-        {!isGrid && (
-          <thead>
-            <tr>
-              <th className='border-b border-gray-300 p-2'></th>
-              <th className='border-b border-gray-300 p-2 text-left'>
-                <select>
-                  <option>Name </option>
-                  <option>Name 1 1</option>
-                </select>
-              </th>
-              <th className='border-b border-gray-300 p-2 text-left'>
-                <select>
-                  <option>Status reason </option>
-                  <option>New</option>
-                </select>
-              </th>
-              <th className='border-b border-gray-300 p-2 text-left'>
-                <select className='px-3 py-2'>
-                  <option>Status</option>
-                  <option>New</option>
-                  <option>In Progress</option>
-                  <option>Pending</option>
-                  <option>Completed</option>
-                </select>
-              </th>
-              <th className='border-b border-gray-300 p-2 text-left'>
-                <select>
-                  <option>Created on </option>
-                  <option>Date </option>
-                </select>
-              </th>
-            </tr>
-          </thead>
-        )}
-
-        {dummyData.map((row) => (
-          <tbody key={row.id}>
-            <tr
-              key={row.id}
-              className={`text-xs font-semibold text-slate-500 w-full flex flex-col ${
-                isGrid ? 'border p-2' : 'table-row border-b border-gray-300'
-              }`}
-            >
-              <td className='  px-2 py-3'>
-                <input type='checkbox' />
-              </td>
-              {/* Name */}
-              <td className={`p-2 ${isGrid ? '' : 'table-cell'}`}>
-                {row.name}
-              </td>
-              {/* Topic */}
-              <td className={`p-2 ${isGrid ? '' : 'table-cell'}`}>
-                {row.topic}
-              </td>
-              {/* Status Reason */}
-              <td className={`p-2 ${isGrid ? '' : 'table-cell'}`}>
-                {row.statusReason}
-              </td>
-              {/* Created On */}
-              <td className={`p-2 ${isGrid ? '' : 'table-cell'}`}>
-                {row.createdOn}
-              </td>
-            </tr>
-          </tbody>
-        ))}
-      </table>
+      {isGrid ? <Grid /> : <TableGrid />}
     </div>
   );
 }
